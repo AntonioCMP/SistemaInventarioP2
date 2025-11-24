@@ -59,3 +59,9 @@ public class Proveedor {
         System.out.println("Cantidad: "+cantidad);
     }
     }
+    private String nombre;
+
+    public Proveedor(String nombre) {
+        this.nombre = nombre;
+    }
+}

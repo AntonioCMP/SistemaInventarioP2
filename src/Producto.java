@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Producto {
 
     //Atributos de la clase
@@ -6,11 +8,11 @@ public class Producto {
     private double precioBase;
     private int cantidadStock;
     private Proveedor proveedor;
-
+    private static int contadorId = 1;
 
     //Constructor
-    public Producto(int id, String nombre, double precioBase, int cantidadStock, Proveedor proveedor) {
-        this.id = id;
+    public Producto(String nombre, double precioBase, int cantidadStock, Proveedor proveedor) {
+        this.id = contadorId++;
         this.nombre = nombre;
         this.precioBase = precioBase;
         this.cantidadStock = cantidadStock;
@@ -61,5 +63,19 @@ public class Producto {
 
 
     //Metodos adicionales de la clase
+    public void aumentarCantidad(int cantidadASumar){
+        this.cantidadStock += cantidadASumar;
+    }
+
+    public void ingresarDatos(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingrese el nombre del producto: ");
+        setNombre(sc.nextLine());
+        System.out.println("Ingrese la cantidad del producto: ");
+        setCantidadStock(sc.nextInt());
+        System.out.println("Ingrese el precio del producto: ");
+        setPrecioBase(sc.nextInt());
+        setProveedor(new Proveedor("Mercado Santa Clara"));
+    }
 
 }
