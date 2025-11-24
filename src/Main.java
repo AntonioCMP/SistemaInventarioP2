@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -5,6 +6,7 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         Inventario inventario= new Inventario();
+        private static ArrayList<Producto> lista = inventario.getListaProductos();
         int opcion;
 
         do {
@@ -51,12 +53,32 @@ public class Main {
     }
 
 
-    public static void mostrarMenu(){}
+    public static void mostrarMenu(){
+        System.out.println("\n===========================================");
+        System.out.println("          SISTEMA DE INVENTARIO");
+        System.out.println("===========================================");
+        System.out.println("1.  Ingresar Nuevo Producto Perecedero");
+        System.out.println("2.  Ingresar Nuevo Producto");
+        System.out.println("3.  Eliminar Alumno Producto");
+        System.out.println("5.  Desplegar todos los productos");
+        System.out.println("6.  Salir");
+        System.out.print(">>> Ingrese su opción: ");
+
+    }
+
 
     public static void agregarProducto(){
 
 
     }
+
+    public static void eliminarProducto(){}
+
+    public static void desplegarTodosProductos(){
+        inventario.getListaProductos();
+
+    }
+
 
         }
 

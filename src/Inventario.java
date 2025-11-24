@@ -10,6 +10,10 @@ public class Inventario {
         this.listaProductos = new ArrayList<>();
     }
 
+    public ArrayList<Producto> getListaProductos() {
+        return listaProductos;
+    }
+
     //Metodos adicionales de la clase
 
     public void añadirProducto(Producto producto){
