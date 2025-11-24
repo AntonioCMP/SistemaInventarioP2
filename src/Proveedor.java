@@ -1,4 +1,3 @@
-import java.util.Scanner;
 //WAZAAAA
 public class Proveedor {
     /**
@@ -7,13 +6,13 @@ public class Proveedor {
     private String nombreProveedor;
     private Integer tiempoEntregaDias;
     int nPedido=0;
-    Scanner sc = new Scanner(System.in);
-/**Constructores y Destructores*/
+
+    /**Constructores y Destructores*/
     public Proveedor(String nombreProveedor, Integer tiempoEntregaDias) {
         this.nombreProveedor = nombreProveedor;
         this.tiempoEntregaDias = tiempoEntregaDias;
     }
-/**Mètodos de Java*/
+    /**Mètodos de Java*/
     public String getNombreProveedor() {
         return nombreProveedor;
     }
@@ -29,33 +28,13 @@ public class Proveedor {
     public void setTiempoEntregaDias(Integer tiempoEntregaDias) {
         this.tiempoEntregaDias = tiempoEntregaDias;
     }
-/**Métodos Propios*/
+    /**Métodos Propios*/
     public void realizarPedido(Integer cantidad, Integer idProducto ){
-        nPedido=nPedido+1;
-        boolean loop1 = false;
-        boolean loop2 = false;
-
+        nPedido = nPedido + 1;
         System.out.println("-----Realizar Pedido Producto-----");
-        do {
-        System.out.println("Ingrese la ID del producto: ");
-        if (sc.hasNextInt()||sc.nextInt()>0) {    // ver si el ID es entero
-            idProducto = sc.nextInt();
-            loop1 = true;
-        } else {
-            System.out.println("Error: debe ingresar un número entero.");
-            sc.nextLine();
-        }}while(loop1 == false);
-        do {
-            System.out.println("Ingrese la cantidad del producto "+idProducto+" para su pedido: ");
-            if (sc.hasNextInt()||sc.nextInt()>0) {    // ver si el ID es entero
-                cantidad = sc.nextInt();
-                loop2 = true;
-            } else {
-                System.out.println("Valor incorrecto,ingrese de nuevo.");
-                sc.nextLine();
-            }}while(loop2 == false);
         System.out.println("Pedido #"+nPedido+" ha sido creado con éxito");
-        System.out.println("Producto: "+idProducto);
-        System.out.println("Cantidad: "+cantidad);
+        System.out.println("Producto ID: "+idProducto);
+        System.out.println("Cantidad solicitada: "+cantidad);
+        System.out.println("Tiempo estimado: " + tiempoEntregaDias + " dias.");
     }
-    }
+}

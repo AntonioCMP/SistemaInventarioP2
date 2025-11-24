@@ -1,8 +1,6 @@
-import java.util.Scanner;
+public abstract class Producto {
 
-public class Producto {
-
-    //Atributos de la clase
+    /**Atributos de la clase*/
     private int id;
     private String nombre;
     private double precioBase;
@@ -19,8 +17,9 @@ public class Producto {
         this.proveedor = proveedor;
     }
 
+    public abstract double calcularPrecio();
 
-    //Getters y Setters de la clase producto
+    /**Getters y Setters de la clase producto*/
     public int getId() {
         return id;
     }
@@ -65,17 +64,6 @@ public class Producto {
     //Metodos adicionales de la clase
     public void aumentarCantidad(int cantidadASumar){
         this.cantidadStock += cantidadASumar;
-    }
-
-    public void ingresarDatos(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Ingrese el nombre del producto: ");
-        setNombre(sc.nextLine());
-        System.out.println("Ingrese la cantidad del producto: ");
-        setCantidadStock(sc.nextInt());
-        System.out.println("Ingrese el precio del producto: ");
-        setPrecioBase(sc.nextInt());
-        setProveedor(new Proveedor("Mercado Santa Clara"));
     }
 
 }
