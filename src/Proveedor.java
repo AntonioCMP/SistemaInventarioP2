@@ -1,5 +1,5 @@
 import java.util.Scanner;
-//WAZAAA
+//WAZAAAA
 public class Proveedor {
     /**
      * Atributos de la Clase Proveedor
