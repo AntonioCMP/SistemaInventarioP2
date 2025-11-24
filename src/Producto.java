@@ -1,10 +1,14 @@
 public class Producto {
+
+    //Atributos de la clase
     private int id;
     private String nombre;
     private double precioBase;
     private int cantidadStock;
     private Proveedor proveedor;
 
+
+    //Constructor
     public Producto(int id, String nombre, double precioBase, int cantidadStock, Proveedor proveedor) {
         this.id = id;
         this.nombre = nombre;
@@ -13,6 +17,8 @@ public class Producto {
         this.proveedor = proveedor;
     }
 
+
+    //Getters y Setters de la clase producto
     public int getId() {
         return id;
     }
@@ -52,4 +58,8 @@ public class Producto {
     public void setProveedor(Proveedor proveedor) {
         this.proveedor = proveedor;
     }
+
+
+    //Metodos adicionales de la clase
+
 }

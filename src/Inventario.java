@@ -6,8 +6,8 @@ public class Inventario {
     private ArrayList<Producto> listaProductos;
 
     //Constructor
-    public Inventario(ArrayList<Producto> listaProductos) {
-        this.listaProductos = listaProductos;
+    public Inventario() {
+        this.listaProductos = new ArrayList<>();
     }
 
     //Metodos adicionales de la clase
